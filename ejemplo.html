@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Progress</title>
+</head>
+<body>
+
+    <h1>Progreso de la Carga</h1>
+    <progress value="30" max="100"></progress>
+    <span>30%</span>
+
+    <script>
+        // Simular un proceso de carga 
+        let progress = document.querySelector('progress');
+        let value = 30; // Valor inicial
+
+        // Incrementar el valor de progreso cada segundo
+        setInterval(() => {
+            if (value < 100) {
+                value += 10;
+                progress.value = value;
+                document.querySelector('span').textContent = value + '%';
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
