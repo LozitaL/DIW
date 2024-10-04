@@ -6,44 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Basico</title>
 </head>
+<style>
+    .form {}
+    .a1{}
+    .a2{}
+    .a3{}
+    .a4{}
+</style>
 
 <body>
-
-    <h2>Formulario basico</h2>
-    <form action="/algo.php" target="_blank">
-        <div class="formulario">
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="Nombre" placeholder="Nombre">
-        </div>
-        <div class="formulario">
-            <label for="apellidos">Apellidos</label>
-            <input type="text" name="apellidos" id="Apellidos" placeholder="Apellidos">
-        </div>
-        <div class="formulario">
-            <label for="ntlf">Telefono</label>
-            <input type="number" name="numerotlf" id="Ntlf" placeholder="000 00 00 00">
-        </div>
-        <div class="formulario">
-            <label for="email">Correo Electronico</label>
-            <input type="email" name="correo" id="Correo" placeholder="ejemplo@.mail.com">
-            <br><small>Asegurese de que escribe correctamente su dirección de correo</small>
-        </div>
-        <div>
-            <label for="eleccion">Seleccione alguna opcion</label>
-            <input type="radio"><label for="opcion1">opcion 1</label>
-            <input type="radio"><label for="opcion1">opcion 2</label>
-            <input type="radio"><label for="opcion1">opcion 3</label>
-        </div>
-        <div>
-            <select name="" id="">
-                <input type="text">
-            </select>
-        </div>
-        <p>
-        <button type="submit" id="bEnviar" value="submit">Enviar</button>
-        <details><summary>?</summary>Si tienes algun problema con el envio contacta al administrador</details>
-        </p>
-    </form>
+    <header class="a1">a</header>
+    <nav class="a2">a</nav>
+    <aside class="a3">a</aside>
+    <section class="a4">
+        <article class="form">
+            <h2>Formulario basico</h2>
+            <form action="/algo.php" target="_blank">
+                <div class="formulario">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="Nombre" placeholder="Nombre">
+                </div>
+                <div class="formulario">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" name="apellidos" id="Apellidos" placeholder="Apellidos">
+                </div>
+                <div class="formulario">
+                    <label for="ntlf">Telefono</label>
+                    <input type="number" name="numerotlf" id="Ntlf" placeholder="000 00 00 00">
+                </div>
+                <div class="formulario">
+                    <label for="email">Correo Electronico</label>
+                    <input type="email" name="correo" id="Correo" placeholder="ejemplo@.mail.com">
+                    <br><small>Asegurese de que escribe correctamente su dirección de correo</small>
+                </div>
+                <div>
+                    <label for="eleccion">Seleccione alguna opcion</label><br>
+                    <input type="radio" id="op1" name="eleccion" value="1"><label for="opcion1">opcion 1</label>
+                    <input type="radio" id="op2" name="eleccion" value="2"><label for="opcion2">opcion 2</label>
+                    <input type="radio" id="op3" name="eleccion" value="3"><label for="opcion3">opcion 3</label>
+                </div>
+                <div>
+                    <select name="" id="">
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                        <option value="c">c</option>
+                    </select>
+                </div>
+                <p>
+                    <button type="submit" id="bEnviar" value="submit">Enviar</button>
+                <details>
+                    <summary>?</summary>Si tienes algun problema con el envio contacta al administrador
+                </details>
+                </p>
+            </form>
+        </article>
+    </section>
 
 </body>
 
