@@ -1,0 +1,31 @@
+.sidebar-main{  box-sizing: border-box;  
+    margin: 0px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    max-width: 100%;
+    height: auto;}
+#header{
+    max-height:17vh ;
+    border: 2px solid rgb(130, 98, 18);
+    border-radius: 12px;
+    display: flex;
+}
+#logo{
+
+    border: 1px solid greenyellow;
+    height: 5,5vh;
+    width: 15vh;
+}
+#letras{
+ display: flex;
+ border: 1px solid blue;
+ 
+}
+.limp{}
+#body{}
+#main{}
+#sidebar{}
+#footer{
+    height: 3vh;
+}
