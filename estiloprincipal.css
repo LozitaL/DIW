@@ -17,7 +17,7 @@
             display: inline-block;
         }
         
-        ul li a, ul li p ,p{
+        ul li a, ul li p{
             display: block;
             padding: 10px 20px;
             text-decoration: none;
