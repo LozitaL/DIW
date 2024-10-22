@@ -1,0 +1,26 @@
+.btn__basic {
+    font-family: BentonSansBBVA-Medium,Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    will-change: background-position;
+    background-size: 210% 50%;
+    background-position: -100% 0%;
+    background-repeat: no-repeat;
+    transition: background-position 2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    background-color: #000000;
+    background-image: linear-gradient(100deg,#a51414 50%,#000000 50%);
+    color: #fff;
+    text-align: center;
+    max-width: 100%;
+    line-height: 24px;
+    padding: 12px 32px;
+    border-radius: 1px;
+    min-width: 76px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+.btn__basic:focus,.btn__basic:hover {
+    background-position: 0 center
+}
+
