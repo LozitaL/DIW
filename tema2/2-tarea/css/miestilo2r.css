@@ -1,0 +1,62 @@
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+article {
+    position: absolute;
+    background-color: grey;
+    width: 18vw; 
+    height: 20vh; 
+    max-width: 300px; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header {
+    position: absolute;
+    background-color: red;
+    height: 5vh; 
+    width: 110%;
+    top: 0;
+    left: -5%;
+}
+
+nav {
+    position: absolute;
+    background-color: darkred;
+    bottom: 0px;
+    height: 5vh; 
+    width: 2vw; 
+    max-height: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ventana1 {
+    position: absolute;
+    background-color: blue;
+    height: 5vh; 
+    width: 5vh;
+    left: 5%;
+    top: 30%;
+}
+
+.ventana2 {
+    position: absolute;
+    background-color: blue;
+    height: 5vh;
+    width: 5vh;
+    top: 50%;
+    right: 5%;
+}
+
+aside {
+    position: absolute;
+    background-color: yellow;
+    width: 1.5vw; 
+    height: 5vh;
+    top: -14%;
+    left: 25%;
+}
