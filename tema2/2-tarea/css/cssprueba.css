@@ -4,9 +4,11 @@
     line-height: 24px;
     will-change: background-position;
     background-size: 210% 50%;
+    /*Aca cambias el origen y posicion del fondo de animacion*/
     background-position: -100% 0%;
     background-repeat: no-repeat;
-    transition: background-position 2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    /*Aqui cambias la velocidad de animacion*/
+    transition: background-position 1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     background-color: #000000;
     background-image: linear-gradient(100deg,#a51414 50%,#000000 50%);
     color: #fff;
