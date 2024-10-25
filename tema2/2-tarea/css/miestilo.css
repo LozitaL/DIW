@@ -1,6 +1,7 @@
 .sidebar-main{
     margin: 3px;
     position: relative;
+    max-height: 100vh;
 }
 #header{
     border: 5px solid rgb(133, 96, 17);
