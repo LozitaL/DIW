@@ -1,0 +1,97 @@
+* {
+ box-sizing: border-box;
+    padding: 0;
+   
+}
+body {
+    margin: 0;
+    cursor: url(/tema2/4-tarea/img/cursor.png), auto;
+    background-color: rgb(1, 10, 19);
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  }
+  
+  .header {
+    background-color: rgb(1, 10, 19);
+    position: relative;
+    padding: 0.5vh;
+    width: 100vw;
+    border-bottom: 1px solid rgb(60, 60, 65);
+    display: flex; 
+    align-items: center; 
+  }
+  
+  .icon {
+    width: 5%; 
+    aspect-ratio: 1; 
+    margin-left: 1%; 
+    overflow: hidden; 
+  }
+  
+  .icon img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+  }
+
+
+  .nav {
+    position: relative;
+    background-color: rgb(1, 10, 19);
+    border-bottom: 1px solid rgb(60, 60, 65);
+    color: rgb(240, 230, 210);
+    text-align: justify;
+    width: 70vw;
+    height: 5vh;
+    margin-bottom: 0.3vh;
+    margin-inline-start: auto;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    color: rgb(240, 230, 210);
+
+  }
+  
+  .section {
+    color: rgb(240, 230, 210);
+    width: 33vw;
+    height: 18vh;
+    border: 1px solid rgb(60, 60, 65);
+    margin: 0.5vw;
+    background-color: rgb(1, 10, 19);
+  }
+  
+  
+  .article {
+    color: rgb(240, 230, 210);
+    margin: 1vh;
+    width: 60vw;
+    height: 55vh;
+    border: 1px solid rgb(60, 60, 65);
+    margin-right: 0.5vw;
+    background-color: rgb(1, 10, 19);
+  }
+  
+  .aside {
+    color: rgb(240, 230, 210);
+
+    width: 40vw;
+    height: 55vh;
+    border: 1px solid rgb(60, 60, 65);
+    background-color: rgb(1, 10, 19);
+  }
+  
+  .footer {
+    color: rgb(240, 230, 210);
+    position: absolute;
+    bottom: 0vh;
+    background-color: rgb(1, 10, 19);
+    text-align: center;
+    width: 100vw;
+    border-top: 1px solid rgb(60, 60, 65);
+
+  }
