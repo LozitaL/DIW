@@ -58,7 +58,7 @@ body {
   
   .section {
     color: rgb(240, 230, 210);
-    width: 33vw;
+    width: 32vw;
     height: 18vh;
     border: 1px solid rgb(60, 60, 65);
     margin: 0.5vw;
@@ -94,4 +94,44 @@ body {
     width: 100vw;
     border-top: 1px solid rgb(60, 60, 65);
 
+  }
+  .carousel {
+    padding: 16px;
+    background-color: rgb(1, 10, 19); 
+    color: white;
+  }
+  
+  .carousel h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .carousel p {
+    margin-bottom: 1rem;
+    color: #ccc;
+  }
+  
+  .carousel-track {
+    display: flex;
+    gap: 16px;
+    overflow: hidden;
+    cursor: grab; 
+    scroll-behavior: auto; 
+  
+  
+  }
+  
+  .card {
+    min-width: 200px;
+    padding: 16px;
+    background-color: rgb(1, 10, 19); 
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    user-select: none; 
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
   }
