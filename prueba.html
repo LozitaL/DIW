@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carousel {
+  padding: 16px;
+  background-color: #10141f; /* Fondo oscuro */
+  color: white;
+}
+
+.carousel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.carousel p {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  overflow: hidden; /* Esconde contenido que no cabe */
+  cursor: grab; /* Cambia el cursor al estilo de arrastrar */
+  scroll-behavior: auto; /* Habilita un scroll suave */
+
+
+}
+
+.card {
+  min-width: 200px;
+  padding: 16px;
+  background-color: #1e293b; /* Fondo para las tarjetas */
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  user-select: none; /* Evita seleccionar texto al arrastrar */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <h2>Popular Del Día</h2>
+        <p>Las series más populares de la actualidad.</p>
+        <div class="carousel-track">
+          <!-- Tarjetas del carrousel -->
+          <div class="card">El demonio celestial...</div>
+          <div class="card">Shirone el infinito...</div>
+          <div class="card">Nivelando con los dioses...</div>
+          <div class="card">Regresión del bastardo...</div>
+          <div class="card">El maestro de la espada...</div>
+        </div>
+      </div>    
+      
+      <script>
+        const track = document.querySelector('.carousel-track');
+
+let isDragging = false;
+let startX;
+let scrollLeft;
+
+track.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  track.classList.add('active');
+  startX = e.pageX - track.offsetLeft;
+  scrollLeft = track.scrollLeft;
+});
+
+track.addEventListener('mouseleave', () => {
+  isDragging = false;
+  track.classList.remove('active');
+});
+
+track.addEventListener('mouseup', () => {
+  isDragging = false;
+  track.classList.remove('active');
+});
+
+track.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  e.preventDefault();
+  const x = e.pageX - track.offsetLeft;
+  const walk = (x - startX) * 1; // La velocidad del desplazamiento
+  track.scrollLeft = scrollLeft - walk;
+});
+
+      </script>
+</body>
+</html>
