@@ -1,100 +1,111 @@
 * {
- box-sizing: border-box;
-    padding: 0;
-   
+  box-sizing: border-box;
+  padding: 0;
 }
+
 body {
-    margin: 0;
-    cursor: url(/tema2/4-tarea/img/cursor.png), auto;
-    background-color: rgb(1, 10, 19);
-    font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
-  }
-  
-  .header {
-    background-color: rgb(1, 10, 19);
-    position: relative;
-    padding: 0.5vh;
-    width: 100vw;
-    border-bottom: 1px solid rgb(60, 60, 65);
-    display: flex; 
-    align-items: center; 
-  }
-  
-  .icon {
-    width: 5%; 
-    aspect-ratio: 1; 
-    margin-left: 1%; 
-    overflow: hidden; 
-  }
-  
-  .icon img {
-    width: 100%; 
-    height: 100%;
-    object-fit: cover; 
-  }
+  margin: 0;
+  cursor: url(/tema2/4-tarea/img/cursor.png), auto;
+  background-color: rgb(1, 10, 19);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body takes up at least the full height of the viewport */
+}
+body::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+.header {
+  background-color: rgb(1, 10, 19);
+  position: relative;
+  padding: 0.5vh;
+  width: 100%;
+  border-bottom: 1px solid rgb(60, 60, 65);
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 5%;
+  aspect-ratio: 1;
+  margin-left: 1%;
+  overflow: hidden;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav {
+  position: relative;
+  background-color: rgb(1, 10, 19);
+  border-bottom: 1px solid rgb(60, 60, 65);
+  color: rgb(240, 230, 210);
+  text-align: justify;
+  width: 70vw;
+  height: 10vh;
+  margin-bottom: 0.3vh;
+  margin-inline-start: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  color: rgb(240, 230, 210);
+}
+
+.section {
+  color: rgb(240, 230, 210);
+  width: 32vw;
+  height: 18vh;
+  border: 1px solid rgb(60, 60, 65);
+  margin: 0.5vw;
+  background-color: rgb(1, 10, 19);
+}
+
+.article {
+  color: rgb(240, 230, 210);
+  margin: 1vh;
+  width: 60vw;
+  height: 55vh;
+  border: 1px solid rgb(60, 60, 65);
+  margin-right: 0.5vw;
+  background-color: rgb(1, 10, 19);
+  flex-grow: 1; /* Allow the article to grow and take remaining space */
+}
+
+.aside {
+  color: rgb(240, 230, 210);
+  width: 40vw;
+  height: 55vh;
+  border: 1px solid rgb(60, 60, 65);
+  background-color: rgb(1, 10, 19);
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1; /* Allow the main content to take remaining space */
+}
+
+.footer {
+  color: rgb(240, 230, 210);
+  position: relative;
+  background-color: rgb(1, 10, 19);
+  text-align: center;
+  border-top: 1px solid rgb(60, 60, 65);
+  padding: 1vh; /* Ensures the footer is well-spaced */
+  width: 100%;
+  bottom: 0;
+}
 
 
-  .nav {
-    position: relative;
-    background-color: rgb(1, 10, 19);
-    border-bottom: 1px solid rgb(60, 60, 65);
-    color: rgb(240, 230, 210);
-    text-align: justify;
-    width: 70vw;
-    height: 5vh;
-    margin-bottom: 0.3vh;
-    margin-inline-start: auto;
-  }
-  
-  .row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
-    color: rgb(240, 230, 210);
-
-  }
-  
-  .section {
-    color: rgb(240, 230, 210);
-    width: 32vw;
-    height: 18vh;
-    border: 1px solid rgb(60, 60, 65);
-    margin: 0.5vw;
-    background-color: rgb(1, 10, 19);
-  }
-  
-  
-  .article {
-    color: rgb(240, 230, 210);
-    margin: 1vh;
-    width: 60vw;
-    height: 55vh;
-    border: 1px solid rgb(60, 60, 65);
-    margin-right: 0.5vw;
-    background-color: rgb(1, 10, 19);
-  }
-  
-  .aside {
-    color: rgb(240, 230, 210);
-
-    width: 40vw;
-    height: 55vh;
-    border: 1px solid rgb(60, 60, 65);
-    background-color: rgb(1, 10, 19);
-  }
-  
-  .footer {
-    color: rgb(240, 230, 210);
-    position: absolute;
-    bottom: 0vh;
-    background-color: rgb(1, 10, 19);
-    text-align: center;
-    width: 100vw;
-    border-top: 1px solid rgb(60, 60, 65);
-
-  }
   .carousel {
     padding: 16px;
     background-color: rgb(1, 10, 19); 
@@ -113,17 +124,17 @@ body {
   
   .carousel-track {
     display: flex;
-    gap: 16px;
+    gap: 1vw;
     overflow: hidden;
-    cursor: grab; 
+    cursor: url(/tema2/4-tarea/img/cursor.png), auto;
     scroll-behavior: auto; 
-  
+    margin: 2px;
   
   }
   
   .card {
-    min-width: 200px;
-    padding: 16px;
+    min-width: 33vw;   
+    padding: 0px;
     background-color: rgb(1, 10, 19); 
     border-radius: 8px;
     text-align: center;
