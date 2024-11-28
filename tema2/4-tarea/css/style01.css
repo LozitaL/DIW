@@ -65,7 +65,7 @@ body::-webkit-scrollbar {
   width: 32vw;
   height: 18vh;
   border: 1px solid rgb(60, 60, 65);
-  margin: 0.5vw;
+  margin: 0.0vw;
   background-color: rgb(1, 10, 19);
 }
 
@@ -124,11 +124,11 @@ body::-webkit-scrollbar {
   
   .carousel-track {
     display: flex;
-    gap: 1vw;
+    gap: 0vw;
     overflow: hidden;
     cursor: url(/tema2/4-tarea/img/cursor.png), auto;
     scroll-behavior: auto; 
-    margin: 2px;
+    margin: 0px;
   
   }
   
@@ -136,13 +136,11 @@ body::-webkit-scrollbar {
     min-width: 33vw;   
     padding: 0px;
     background-color: rgb(1, 10, 19); 
-    border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     user-select: none; 
   }
   
   .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
     transition: transform 0.2s;
   }
