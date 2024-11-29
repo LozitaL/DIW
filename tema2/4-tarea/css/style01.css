@@ -4,13 +4,13 @@
 }
 
 body {
-  margin: 0;
+  margin: 5px;
   cursor: url(/tema2/4-tarea/img/cursor.png), auto;
   background-color: rgb(1, 10, 19);
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures the body takes up at least the full height of the viewport */
+  min-height: 100vh; 
 }
 body::-webkit-scrollbar {
   width: 0px;
@@ -26,17 +26,12 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 
-.icon {
-  width: 5%;
-  aspect-ratio: 1;
-  margin-left: 1%;
-  overflow: hidden;
-}
 
 .icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 15%;
+  position: relative;
+  z-index: 10; 
+  transition: transform 1.5s, content 1.5s;
 }
 
 .nav {
@@ -49,6 +44,72 @@ body::-webkit-scrollbar {
   height: 10vh;
   margin-bottom: 0.3vh;
   margin-inline-start: auto;
+}
+ .nav {
+  position: relative;
+  background-color: rgb(1, 10, 19);
+  color: rgb(240, 230, 210);
+  text-align: left;
+  width: 70vw;
+  height: auto;
+  margin-bottom: 0.3vh;
+  margin-inline-start: auto;
+  padding: 10px;
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  position: relative;
+  display: inline-block;
+}
+
+.nav li a {
+  color: rgb(240, 230, 210);
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.nav li ul {
+  display: none;
+  position: absolute;
+  background-color: rgb(20, 20, 30);
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav li:hover ul {
+  display: block;
+}
+
+.nav li ul li {
+  display: block;
+}
+
+@media (max-width: 1080px) {
+  body {
+      margin: 0;
+  }
+
+  .aside {
+      display: none;
+  }
+
+  .article {
+      width: 100%;
+  }
+}
+
+
+
+.icon img:hover {
+  content: url('/tema2/4-tarea/img/League-of-Legends-logo-600x389.png'); 
+  transform: scale(1.0);
 }
 
 .row {
@@ -77,7 +138,7 @@ body::-webkit-scrollbar {
   border: 1px solid rgb(60, 60, 65);
   margin-right: 0.5vw;
   background-color: rgb(1, 10, 19);
-  flex-grow: 1; /* Allow the article to grow and take remaining space */
+  flex-grow: 1;
 }
 
 .aside {
@@ -91,7 +152,7 @@ body::-webkit-scrollbar {
 .main-content {
   display: flex;
   justify-content: space-between;
-  flex-grow: 1; /* Allow the main content to take remaining space */
+  flex-grow: 1; 
 }
 
 .footer {
@@ -100,7 +161,7 @@ body::-webkit-scrollbar {
   background-color: rgb(1, 10, 19);
   text-align: center;
   border-top: 1px solid rgb(60, 60, 65);
-  padding: 1vh; /* Ensures the footer is well-spaced */
+  padding: 1vh; 
   width: 100%;
   bottom: 0;
 }
