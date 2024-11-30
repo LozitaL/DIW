@@ -29,3 +29,28 @@ track.addEventListener('mousemove', (e) => {
   const walk = (x - startX) * 1; 
   track.scrollLeft = scrollLeft - walk;
 });
+
+const gridItems = document.querySelectorAll('.grid-item');
+
+gridItems.forEach(item => {
+  item.addEventListener('mouseup', () => {
+
+    gridItems.forEach(i => i.classList.remove('selected'));
+    
+    item.classList.add('selected');
+  });
+});
+
+const grid2Items = document.querySelectorAll('.grid-item');
+const loreText = document.getElementById('lore-text');
+
+// Agrega un evento a cada grid-item
+grid2Items.forEach(item => {
+  item.addEventListener('click', () => {
+    // Obtiene el texto del <p> dentro del grid-item
+    const itemText = item.querySelector('p').textContent;
+
+    // Actualiza el contenido del aside
+    loreText.textContent = itemText;
+  });
+});

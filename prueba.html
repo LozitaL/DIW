@@ -1,97 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .carousel {
-  padding: 16px;
-  background-color: #10141f; /* Fondo oscuro */
-  color: white;
-}
-
-.carousel h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.carousel p {
-  margin-bottom: 1rem;
-  color: #ccc;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 16px;
-  overflow: hidden; /* Esconde contenido que no cabe */
-  cursor: url(/tema2/4-tarea/img/cursor.png), auto;  scroll-behavior: auto; /* Habilita un scroll suave */
-
-
-}
-
-.card {
-  min-width: 200px;
-  padding: 16px;
-  background-color: #1e293b; /* Fondo para las tarjetas */
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  user-select: none; /* Evita seleccionar texto al arrastrar */
-}
-
-.card:hover {
-  transform: scale(1.05);
-  transition: transform 0.2s;
-}
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Sitio Web</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="carousel">
-        <h2>Popular Del Día</h2>
-        <p>Las series más populares de la actualidad.</p>
-        <div class="carousel-track">
-          <div class="card">El demonio celestial...</div>
-          <div class="card">Shirone el infinito...</div>
-          <div class="card">Nivelando con los dioses...</div>
-          <div class="card">Regresión del bastardo...</div>
-          <div class="card">El maestro de la espada...</div>
+  <header class="bg-primary text-white text-center py-4">
+    <h1>Mi Sitio Web</h1>
+    <nav>
+      <a href="#about" class="text-white mx-2">Acerca de</a>
+      <a href="#contact" class="text-white mx-2">Contacto</a>
+    </nav>
+  </header>
+  
+  <main class="container mt-5">
+    <section id="hero" class="text-center bg-light p-5 rounded">
+      <h2>¡Bienvenido!</h2>
+      <p>Este es un sitio web simple creado con Bootstrap.</p>
+    </section>
+    
+    <section id="about" class="mt-5">
+      <h3>Acerca de mí</h3>
+      <p>Este sitio fue diseñado como un ejemplo básico de un prototipo con Bootstrap.</p>
+    </section>
+    
+    <section id="contact" class="mt-5">
+      <h3>Contacto</h3>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="name" placeholder="Tu nombre">
         </div>
-      </div>    
-      
-      <script>
-        const track = document.querySelector('.carousel-track');
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="message" rows="3" placeholder="Escribe tu mensaje"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </section>
+  </main>
+  
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>© 2024 Mi Sitio Web</p>
+  </footer>
 
-let isDragging = false;
-let startX;
-let scrollLeft;
-
-track.addEventListener('mousedown', (e) => {
-  isDragging = true;
-  track.classList.add('active');
-  startX = e.pageX - track.offsetLeft;
-  scrollLeft = track.scrollLeft;
-});
-
-track.addEventListener('mouseleave', () => {
-  isDragging = false;
-  track.classList.remove('active');
-});
-
-track.addEventListener('mouseup', () => {
-  isDragging = false;
-  track.classList.remove('active');
-});
-
-track.addEventListener('mousemove', (e) => {
-  if (!isDragging) return;
-  e.preventDefault();
-  const x = e.pageX - track.offsetLeft;
-  const walk = (x - startX) * 1; // La velocidad del desplazamiento
-  track.scrollLeft = scrollLeft - walk;
-});
-
-      </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

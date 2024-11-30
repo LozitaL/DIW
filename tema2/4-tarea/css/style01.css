@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+
 body {
   margin: 5px;
   cursor: url(/tema2/4-tarea/img/cursor.png), auto;
@@ -11,6 +12,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; 
+}
+
+.a1:hover{
+  cursor: url(/tema2/4-tarea/img/cursor-pointer.png), auto;
+  border-bottom: 1px solid rgb(200, 155, 60);
 }
 body::-webkit-scrollbar {
   width: 0px;
@@ -32,9 +38,20 @@ body::-webkit-scrollbar {
   position: relative;
   z-index: 10; 
   transition: transform 1.5s, content 1.5s;
+  opacity: 0; 
+  animation: fadeIn 2s forwards; 
 }
 
-.nav {
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+nav {
   position: relative;
   background-color: rgb(1, 10, 19);
   border-bottom: 1px solid rgb(60, 60, 65);
@@ -44,8 +61,9 @@ body::-webkit-scrollbar {
   height: 10vh;
   margin-bottom: 0.3vh;
   margin-inline-start: auto;
+
 }
- .nav {
+ nav {
   position: relative;
   background-color: rgb(1, 10, 19);
   color: rgb(240, 230, 210);
@@ -57,37 +75,38 @@ body::-webkit-scrollbar {
   padding: 10px;
 }
 
-.nav ul {
+nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.nav li {
+nav li {
   position: relative;
   display: inline-block;
 }
 
-.nav li a {
+nav li a {
   color: rgb(240, 230, 210);
   text-decoration: none;
   padding: 10px 15px;
   display: block;
 }
 
-.nav li ul {
+nav li ul {
   display: none;
   position: absolute;
-  background-color: rgb(20, 20, 30);
+  background-color: rgb(2, 16, 31);
   padding: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px rgb(1, 10, 19);
+  border-bottom: 1px solid rgb(200, 155, 60);
 }
 
-.nav li:hover ul {
+nav li:hover ul {
   display: block;
 }
 
-.nav li ul li {
+nav li ul li {
   display: block;
 }
 
@@ -108,8 +127,12 @@ body::-webkit-scrollbar {
 
 
 .icon img:hover {
-  content: url('/tema2/4-tarea/img/League-of-Legends-logo-600x389.png'); 
-  transform: scale(1.0);
+  content: url('/tema2/4-tarea/img/lol2.png'); 
+  width: 19.75%;
+  position: relative;
+  z-index: 10; 
+  cursor: url(/tema2/4-tarea/img/cursor-pointer.png), auto;
+  transition: transform 1.5s, content 1.5s;
 }
 
 .row {
@@ -119,26 +142,117 @@ body::-webkit-scrollbar {
   margin: 0 auto;
   width: 100%;
   color: rgb(240, 230, 210);
+  height: 75vh;
 }
 
 .section {
   color: rgb(240, 230, 210);
   width: 32vw;
   height: 18vh;
-  border: 1px solid rgb(60, 60, 65);
+  border: 1px solid rgb(60, 60, 65);  
   margin: 0.0vw;
   background-color: rgb(1, 10, 19);
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  position: relative;    
 }
+.section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  position: absolute; 
+  top: 0;
+  left: 0;
+  -webkit-user-drag: none;
+}
+
+.image-name {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: rgb(200, 155, 60); 
+  opacity: 0; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 10px;
+  border-radius: 0;
+  transition: opacity 0.3s ease; 
+}
+.section:hover .image-name {
+  opacity: 1; 
+}
+
 
 .article {
   color: rgb(240, 230, 210);
   margin: 1vh;
   width: 60vw;
-  height: 55vh;
-  border: 1px solid rgb(60, 60, 65);
+  height: 55vh; 
+  border: 1px solid rgba(0, 0, 0, 0.5); 
   margin-right: 0.5vw;
   background-color: rgb(1, 10, 19);
-  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  grid-template-rows: repeat(8,1fr);
+  grid-auto-rows: 100px; 
+  gap: 1rem; 
+  overflow-y: auto; 
+  position: relative;
+  overflow-x: hidden; 
+}
+
+.article::-webkit-scrollbar {
+  width: 8px; 
+
+}
+
+.article::-webkit-scrollbar-thumb {
+  background-color: rgb(163, 127, 48); 
+  border-radius: 4px;
+  transform: scaleY(0.3); 
+
+}
+
+.article::-webkit-scrollbar-track {
+  background-color: rgb(1, 10, 19);
+}
+
+/* Elementos de la cuadrícula */
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid rgb(60, 60, 65);
+  cursor: pointer;
+}
+
+/* Imagen en blanco y negro por defecto */
+.image-bnw {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  width: 100%; /* La imagen ocupa todo el ancho de la celda */
+  height: auto; /* Mantiene la proporción de la imagen */
+  max-height: 100%; /* Evita que la imagen se salga de la celda */
+  object-fit: cover; /* Asegura que la imagen se ajuste a su contenedor */
+  border-radius: 6px; /* Opcional: esquinas redondeadas */
+}
+
+
+/* Imagen en color al seleccionar */
+.grid-item.selected .image-bnw {
+  filter: grayscale(0%);
+}
+
+#lore-text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: rgb(240, 230, 210);
 }
 
 .aside {
@@ -155,15 +269,15 @@ body::-webkit-scrollbar {
   flex-grow: 1; 
 }
 
-.footer {
+footer {
   color: rgb(240, 230, 210);
   position: relative;
   background-color: rgb(1, 10, 19);
   text-align: center;
   border-top: 1px solid rgb(60, 60, 65);
-  padding: 1vh; 
+  padding: 0vh; 
   width: 100%;
-  bottom: 0;
+
 }
 
 
@@ -187,21 +301,52 @@ body::-webkit-scrollbar {
     display: flex;
     gap: 0vw;
     overflow: hidden;
-    cursor: url(/tema2/4-tarea/img/cursor.png), auto;
     scroll-behavior: auto; 
     margin: 0px;
   
   }
   
   .card {
-    min-width: 33vw;   
+    min-width: 32.9vw;   
     padding: 0px;
     background-color: rgb(1, 10, 19); 
     text-align: center;
     user-select: none; 
   }
-  
-  .card:hover {
-    transform: scale(1.01);
-    transition: transform 0.2s;
+
+  footer {
+    color: rgb(240, 230, 210);
+    background-color: rgb(1, 10, 19);
+    text-align: center;
+    border-top: 1px solid rgb(60, 60, 65);
+    padding: 1rem; 
+    width: 100%;
+    height: 15vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column; 
   }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  footer .container {
+    width: 100%;
+  }
+  
+  footer a {
+    color: rgb(240, 230, 210);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: rgb(200, 155, 60); 
+  }
+  
+  footer .text-center {
+    margin-top: 10px;
+  }
+  
