@@ -104,6 +104,7 @@ nav li ul {
 
 nav li:hover ul {
   display: block;
+  z-index: 10; 
 }
 
 nav li ul li {
@@ -195,8 +196,8 @@ nav li ul li {
   margin-right: 0.5vw;
   background-color: rgb(1, 10, 19);
   display: grid;
-  grid-template-columns: repeat(6, 1fr); 
-  grid-template-rows: repeat(8,1fr);
+  grid-template-columns: repeat(6, 1fr); /*columnas del grid */
+  grid-template-rows: repeat(8,1fr); /* filas del grid */
   grid-auto-rows: 100px; 
   gap: 1rem; 
   overflow-y: auto; 
