@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+         .full-height {
+            min-height: 100vh;
+        }
+
+    </style> <!--no me ponia el grid en toda la pantalla toco improvisar-->
+</head>
+<body>
+    <div class="container-fluid full-height d-flex flex-column">
+        <header class="row bg-primary text-white p-3">
+            <div class="col-12">
+                <h1>Header</h1>
+            </div>
+        </header>
+        <nav class="row bg-secondary text-white p-3">
+            <div class="col-12">
+                <h2>Nav</h2>
+            </div>
+        </nav>
+        <div class="row flex-grow-1">
+            <section class="col-md-9 bg-light p-3">
+                <h2>Section</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </section>
+            <aside class="col-md-3 bg-warning p-3 d-none d-md-block">
+                <h2>Aside</h2>
+                <p>Contenido del aside.</p>
+            </aside>
+        </div>
+        <footer class="row bg-dark text-white p-3">
+            <div class="col-12">
+                <h2>Footer</h2>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
